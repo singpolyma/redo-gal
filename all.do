@@ -1,4 +1,4 @@
 #!/bin/sh
 
-redo-ifchange thumbs
-redo-ifchange index.html
+redo thumbs
+redo index.html

@@ -8,7 +8,7 @@ redo-ifchange img.mustache index.mustache
 	(
 		IFS="
 		"
-		for IMG in `find -name '*.jpg' -not -name '*.thumb.jpg'`; do
+		for IMG in `find -name '*.jpg' -not -name '*.thumb.jpg' | sort -t- -k 2 -n`; do
 			NAME="`basename "$IMG" .jpg`"
 			echo "---
 fullsize: $NAME.jpg
