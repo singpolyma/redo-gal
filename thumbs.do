@@ -4,5 +4,5 @@ IFS="
 "
 for IMG in `find -name '*.jpg' -not -name '*.thumb.jpg'`; do
 	NAME="`basename "$IMG" .jpg`"
-	redo-ifchange "$NAME".thumb.jpg
-done
+	printf "%s\0" "$NAME".thumb.jpg
+done | xargs -0 redo-ifchange
