@@ -1,6 +1,6 @@
 #!/bin/sh
 
-redo-ifchange img.mustache index.mustache
+redo-ifchange img.mustache index.mustache thumbs
 
 (
 	echo "---"
